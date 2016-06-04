@@ -12,6 +12,11 @@ module.exports = function(defaults) {
     }
   });
 
+  // Normalize
+  app.import('/vendor/css/normalize.css');
+  // Skeleton
+  app.import('/vendor/css/skeleton.css');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
