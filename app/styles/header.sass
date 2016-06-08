@@ -3,13 +3,13 @@
   font-weight: bold
   text-transform: uppercase
 
-.menu
+.line
   height: 4px
   width: 100px
   background-color: #000
   transition: width 750ms $easeOutQuad
 
-.menu-wrap > h4
+.menu-wrap > .menu li
   display: inline-block
   font-weight: bold
   text-transform: uppercase
@@ -18,11 +18,20 @@
   transition: opacity 250ms $easeOutQuad
   margin-top: 4px
   opacity: 0
+  list-style-type: none
+
+  a
+    text-decoration: none
+    color: #d3d3d3
+    transition: color 250ms $easeOutQuad
+
+  a.active
+    color: #000
 
 .menu-wrap:hover
-  .menu
+  .line
     width: 500px
 
-  h4
+  .menu li
     transition: opacity 250ms $easeInQuad 750ms
     opacity: 1

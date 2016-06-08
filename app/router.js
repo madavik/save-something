@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('rainharvest');
+  this.route('whySaveSomething', { path: '/why-save-something'});
 });
 
 export default Router;
