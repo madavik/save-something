@@ -1,0 +1,28 @@
+#title
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-weight: bold
+  text-transform: uppercase
+
+.menu
+  height: 4px
+  width: 100px
+  background-color: #000
+  transition: width 750ms $easeOutQuad
+
+.menu-wrap > h4
+  display: inline-block
+  font-weight: bold
+  text-transform: uppercase
+  font-size: 18px
+  margin-left: 30px
+  transition: opacity 250ms $easeOutQuad
+  margin-top: 4px
+  opacity: 0
+
+.menu-wrap:hover
+  .menu
+    width: 500px
+
+  h4
+    transition: opacity 250ms $easeInQuad 750ms
+    opacity: 1
