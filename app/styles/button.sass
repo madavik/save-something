@@ -1,0 +1,46 @@
+.btn
+  position: relative
+  width: 120px
+  height: 50px
+
+.btn:hover
+  p
+    color: #fff
+  &:before
+    height: 50px
+    width: 100%
+  &:after
+    height: 50px
+    width: 100%
+
+.btn:before
+  content: ''
+  position: absolute
+  left: 0
+  bottom: 0
+  height: 4px
+  width: 4px
+  background-color: #000
+  transition: height 350ms $easeOutQuad, width 350ms $easeOutQuad 350ms
+  z-index: -1
+
+.btn:after
+  content: ''
+  position: absolute
+  right: 0
+  bottom: 0
+  height: 4px
+  width: 4px
+  background-color: #000
+  transition: height 350ms $easeOutQuad, width 350ms $easeOutQuad 350ms
+  z-index: -1
+
+.btn p
+  color: #000
+  font-weight: bold
+  text-transform: uppercase
+  font-size: 14px
+  line-height: 50px
+  text-align: center
+  transition: color 450ms $easeOutQuad
+  z-index: 1
