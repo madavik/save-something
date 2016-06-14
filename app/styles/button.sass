@@ -4,36 +4,31 @@
   height: 42px
 
 .btn:hover
+  cursor: pointer
   p
     color: #fff
-  &:before
-    height: 42px
-    width: 100%
+  &:before,
   &:after
     height: 42px
     width: 100%
+    transition: height 350ms $easeOutQuad, width 350ms $easeOutQuad 350ms
 
-.btn:before
-  content: ''
-  position: absolute
-  left: 0
-  bottom: 0
-  height: 4px
-  width: 4px
-  background-color: #000
-  transition: height 350ms $easeOutQuad, width 350ms $easeOutQuad 350ms
-  z-index: -1
-
+.btn:before,
 .btn:after
   content: ''
   position: absolute
-  right: 0
   bottom: 0
-  height: 4px
+  height: 0px
   width: 4px
   background-color: #000
-  transition: height 350ms $easeOutQuad, width 350ms $easeOutQuad 350ms
+  transition: height 350ms $easeOutQuad 350ms, width 350ms $easeOutQuad
   z-index: -1
+
+.btn:before
+  left: 0
+
+.btn:after
+  right: 0
 
 .btn p
   color: #000
