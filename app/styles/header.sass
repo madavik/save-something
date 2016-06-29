@@ -1,50 +1,101 @@
 &
+  width: calc(100% - 40px)
+  height: 70px
   position: relative
+  background-color: #fff
+  padding: 0 20px
+  -webkit-box-shadow: 1px 11px 12px -13px rgba(0,0,0,0.2)
+  -moz-box-shadow: 1px 11px 12px -13px rgba(0,0,0,0.2)
+  box-shadow: 1px 11px 12px -13px rgba(0,0,0,0.2)
 
-#title
-  margin-bottom: 0
-  font-weight: bold
-  text-transform: uppercase
-
-.line
-  height: 4px
-  width: 100px
-  background-color: #000
-  transition: width 750ms $easeOutQuad
+.menu-wrap > .menu
+  margin: 0
+  height: 100%
 
 .menu-wrap > .menu li
   display: inline-block
-  font-weight: bold
-  text-transform: uppercase
-  font-size: 18px
-  margin-left: 30px
-  transition: opacity 250ms $easeOutQuad
-  margin-top: 4px
-  opacity: 0
+  font-weight: 100
+  text-transform: capitalize
+  font-size: 14px
+  margin: 0 15px
   list-style-type: none
-
+  position: relative
   a
-    text-decoration: none
-    color: #d3d3d3
-    transition: color 250ms $easeOutQuad
-
-  a.active
     color: #000
+    text-decoration: none
+    line-height: 70px
+    height: 100%
+    padding: 35px 0
 
-.menu-wrap:hover
-  .line
-    width: 500px
+.menu-wrap > .menu li a:after
+  content: ''
+  position: absolute
+  height: 5px
+  width: 0px
+  bottom: 0
+  left: 0
+  transition: width 250ms $easeOutQuad
+  background-color: #32bafa
 
-  .menu li
-    transition: opacity 250ms $easeInQuad 650ms
-    opacity: 1
+.menu-wrap > .menu li a.active:after
+  width: 100%
+
+.menu-wrap > .menu li:hover
+  a:after
+    width: 100%
+
+.menu-wrap
+  float: right
+
+#title
+  margin-bottom: 0
+  text-transform: uppercase
+  display: inline-block
+  line-height: 70px
+  color: #fff
+  font-weight: 100
+  font-size: 20px
+
+// .line
+//   height: 4px
+//   width: 100px
+//   background-color: #000
+//   transition: width 750ms $easeOutQuad
+
+// .menu-wrap > .menu li
+//   display: inline-block
+//   font-weight: bold
+//   text-transform: uppercase
+//   font-size: 18px
+//   margin-left: 30px
+//   transition: opacity 250ms $easeOutQuad
+//   margin-top: 4px
+//   opacity: 0
+//   list-style-type: none
+
+//   a
+//     text-decoration: none
+//     color: #d3d3d3
+//     transition: color 250ms $easeOutQuad
+
+//   a.active
+//     color: #000
+
+// .menu-wrap:hover
+//   .line
+//     width: 500px
+
+//   .menu li
+//     transition: opacity 250ms $easeInQuad 650ms
+//     opacity: 1
 
 .header-logo
+  display: inline-block
   width: 135px
   height: 70px
-  position: absolute
   right: 0
   top: 0
+  margin-top: 5px
   background-image: url('/assets/images/urc-logo.png')
   background-repeat: no-repeat
   background-size: auto 60px
